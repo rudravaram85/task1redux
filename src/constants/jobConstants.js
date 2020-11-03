@@ -6,3 +6,4 @@ export const JOB_DETAILS_REQUEST = 'JOB_DETAILS_REQUEST';
 export const JOB_DETAILS_SUCCESS = 'JOB_DETAILS_SUCCESS';
 export const JOB_DETAILS_FAIL = 'JOB_DETAILS_FAIL';
 export const JOB_EDIT = 'JOB_EDIT';
+export const JOB_SHOW = 'JOB_SHOW';

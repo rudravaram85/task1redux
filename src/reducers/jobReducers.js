@@ -5,7 +5,7 @@ const {
   JOB_DETAILS_REQUEST,
   JOB_DETAILS_SUCCESS,
   JOB_DETAILS_FAIL,
-  JOB_EDIT
+  JOB_EDIT,JOB_SHOW
 } = require('../constants/jobConstants');
 
 export const jobListReducer = (
@@ -25,10 +25,12 @@ export const jobListReducer = (
 };
 
 export const jobDetailsReducer = (
-  state = { job: {}, loading: true,isHideTable:false,isHideForm:true },
+  state = { job: {}, loading: true,isHideTable:true,isHideForm:true },
   action
 ) => {
   switch (action.type) {
+    case JOB_SHOW:
+      return { isHideTable:false,isHideForm:true,};  
     case JOB_EDIT:
       return { isHideTable:true,isHideForm:false, job:action.payload };
     case JOB_DETAILS_REQUEST:

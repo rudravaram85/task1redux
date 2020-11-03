@@ -1,6 +1,14 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function Dashboard() {
+
+  const dispatch = useDispatch();
+
+  const handleTableShow = (dispatch) => {
+  // tightly coupled, but you have more control over it
+  dispatch({ type: "JOB_SHOW"});
+};
   return (
     <div>
   {/* Navigation */}
@@ -77,7 +85,7 @@ export default function Dashboard() {
                   <li><a className="dropdown-item" href="#">Review</a></li>
                 </ul>
               </li>
-              <li><a className="dropdown-item" href="HRMS_JobList.html">Jobs</a></li>
+              <li><a className="dropdown-item" onClick={()=>handleTableShow(dispatch)}  href="javascript:void(0)">Jobs</a></li>
               <li><a className="dropdown-item" href="#">Candidates</a></li>
               <li><a className="dropdown-item" href="#">Profiles &amp; Resumes</a></li>
               <li><a className="dropdown-item" href="#">Analytics</a></li>

@@ -4,10 +4,10 @@ import ProductScreen from './screens/ProductScreen';
 import Dashboard from './components/Dashboard';
 import { useDispatch, useSelector } from 'react-redux';
 import HomeScreen  from './screens/HomeScreen';
+import JobInfoScreen  from './screens/JobInfoScreen';
+import CandidateScreen  from './screens/CandidateScreen';
 
 function App() {
-
- 
 
 
   return (
@@ -15,7 +15,11 @@ function App() {
       <div className="grid-container">
        <Dashboard />
        <main>  <br/>
-            <HomeScreen/> 
+       <Route path="/jobinfo" component={JobInfoScreen} />
+            <Route path="/candidate" component={CandidateScreen} />
+            
+            <Route exact path="/" component={HomeScreen} />
+            
 
        </main>
        

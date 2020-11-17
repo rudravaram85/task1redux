@@ -1,0 +1,196 @@
+/* Custom Styles Start */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  background: #f3f5f6;
+}
+.font-lg {
+  font-size: 24px;
+}
+.btn + .btn {
+  margin-left: 0.5rem;
+}
+.pointer {
+  cursor: pointer;
+}
+/* .bg-success.opacity-success {
+  background-color: rgb(40 167 69 / 75%)!important;
+}
+.bg-danger.opacity-danger {
+  background-color: rgb(220 53 69 / 75%)!important;
+}
+.bg-warning.opacity-warning {
+  background-color: rgb(255 193 7 / 75%)!important;
+}
+.bg-info.opacity-info {
+  background-color: rgb(23 162 184 / 75%)!important;
+} */
+.btn-rounded {
+  border-radius: 10em;
+}
+.img-sm {
+  width: 30px;
+}
+.img-md {
+  width: 60px;
+}
+.btn-floating {
+  border-radius: 50%;
+  width: 47px;
+  height: 47px;
+}
+.btn-floating.btn-sm {
+  width: 36.15385px;
+  height: 36.15385px;
+}
+.btn-floating.btn-lg {
+  width: 61.1px;
+  height: 61.1px;
+}
+
+
+/* Navbar Dropdown & Subdropdown Onhover Styles Start */
+.navbar-nav li:hover > ul.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu {
+  position:relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top:-9px;
+}
+.dropdown-submenu > a:after {
+  float: right;
+  margin-top: 10px;
+  margin-right: -10px;
+  transform: rotate(-90deg);
+}
+/* Navbar Dropdown & Subdropdown Onhover Styles End */
+/* Custom Styles End */
+
+/* Over Written Styles Start */
+.table {
+  font-size: 0.8rem;
+}
+.table th {
+  font-weight: 500;
+}
+.dropdown-menu {
+  font-size: inherit;
+}
+.form-control {
+  font-size: inherit;
+}
+/* Search with Icon Styles Start */
+.input-group.search .form-control {
+  font-size: 12px;
+  color: #bdb8c0;
+  height: 40px;
+  border-color: #d8c8e0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+.input-group.search .btn-flat {
+  color: #968b9a;
+  border: 1px solid #d8c8e0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+  background: #fff;
+}
+.input-group.search .btn-flat:hover {
+  color: #007bff;
+}
+/* Search with Icon Styles End */
+/* To Remove Dropdown Caret */
+.dropdown-toggle.dropdown-caret-hide::after, .dropdown-toggle.dropdown-caret-hide::before {
+  display: none;
+}
+/* Over Written Styles End */
+
+/* Stepper Styles Start */
+ul.stepper {
+  padding: 0;
+}
+.stepper-horizontal {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.stepper-horizontal li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+ul.stepper li .step {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul.stepper li .step .circle {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1.7rem;
+  color: #fff;
+  text-align: center;
+  background: rgba(0,0,0,0.38);
+  border-radius: 50%;
+}
+ul.stepper li.completed .step .circle {
+  background-color: #28a745;
+}
+ul.stepper li.active .step .circle {
+  background-color: #4285f4;
+}
+.stepper-horizontal li .step .label {
+  margin-top: .63rem;
+}
+ul.stepper li .step .label {
+  display: inline-block;
+  color: rgba(0,0,0,0.38);
+}
+ul.stepper li.active .step .label, ul.stepper li.completed .step .label {
+  font-weight: 600;
+  color: rgba(0,0,0,0.87);
+}
+.stepper-horizontal li:not(:last-child):after {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 1px;
+  /* margin: .5rem 0 0 0; */
+  content: "";
+  background-color: rgba(0,0,0,0.1);
+}
+.stepper-horizontal li:not(:first-child):before {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 1px;
+  /* margin: .5rem 0 0 0; */
+  content: "";
+  background-color: rgba(0,0,0,0.1);
+}
+/* Stepper Styles End */

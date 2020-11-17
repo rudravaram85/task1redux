@@ -1,7 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory  } from 'react-router-dom';
 
 export default function Job(props) {
+
+  const history = useHistory()
+
 
       const item = props.job;
       const dispatch = useDispatch();
@@ -12,8 +16,17 @@ export default function Job(props) {
       // tightly coupled, but you have more control over it
       dispatch({ type: "JOB_EDIT", payload: job });
     };
+
+    
+    const handleRedirect = () => {
+      history.push('/jobinfo');
+
+  };
+
+
     return (
-              <tr>
+
+              <tr onClick={handleRedirect}>
                 <th>{item.client}</th>
                  <td>{item.id}</td>
             <td>{item.name}</td>
@@ -37,6 +50,6 @@ export default function Job(props) {
                         </div>
                       </div>
                     </td>
-                  </tr>  
+                  </tr> 
   );
 }

@@ -1,11 +1,15 @@
 import React from 'react';
-import data from './Data';
+import data1 from './Data';
 import Job from './Job';
+import Axios from "axios";
 
 
 export default function JobList(props) {
 
-  
+  const { data } = await Axios.get("/api/products/");
+
+
+
 
   return (
     <div className="container">
